@@ -79,7 +79,12 @@ const clique = function() {
 	if(cartas_expostas.contador === 2) {
 		if (iguais(cartas_expostas.carta_exposta1, cartas_expostas.carta_exposta2)) {
 			//o par casou
-
+			setTimeout(function(){
+        let primeira_carta = document.getElementById(cartas_expostas.carta_exposta1);
+        let segunda_carta = document.getElementById(cartas_expostas.carta_exposta2);
+        primeira_carta.style.backgroundImage = '';
+        segunda_carta.style.backgroundImage = '';	
+      }, 500);
 		} else {
 			//vira as cartas de volta
 			for(let mascara of document.getElementsByClassName('mascara')) {
